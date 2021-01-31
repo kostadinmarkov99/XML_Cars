@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE car_catalog [
+        <!ELEMENT car_catalog (car)+>
+        <!ELEMENT car (make, model, trim, year, coupe, color, weight, tank, drivetrain)>
+        <!ATTLIST car vin CDATA #REQUIRED>
+        <!ELEMENT make (#PCDATA)>
+        <!ELEMENT model (#PCDATA)>
+        <!ELEMENT trim (#PCDATA)>
+        <!ELEMENT year (#PCDATA)>
+        <!ELEMENT coupe (#PCDATA)>
+        <!ELEMENT color (#PCDATA)>
+        <!ELEMENT weight (#PCDATA)>
+        <!ELEMENT tank (#PCDATA)>
+        <!ELEMENT drivetrain (transmission, engine+, brakes)>
+        <!ELEMENT transmission (transmission_type, gears, differential)>
+        <!ELEMENT transmission_type (#PCDATA)>
+        <!ELEMENT gears (#PCDATA)>
+        <!ELEMENT differential (#PCDATA)>
+        <!ELEMENT engine (cylinders, engine_type, size, power)>
+        <!ATTLIST engine code CDATA #REQUIRED>
+        <!ELEMENT cylinders (#PCDATA)>
+        <!ELEMENT engine_type (#PCDATA)>
+        <!ATTLIST engine_type fuel (бензин| дизел | газ | хибрид) "бензин">
+        <!ELEMENT size (capacity, bore, stroke)>
+        <!ELEMENT capacity (#PCDATA)>
+        <!ELEMENT bore (#PCDATA)>
+        <!ATTLIST bore b_unit CDATA #REQUIRED>
+        <!ELEMENT stroke (#PCDATA)>
+        <!ELEMENT power (#PCDATA)>
+        <!ATTLIST power unit ( кс | кв) "кс">
+        <!ELEMENT brakes (frond,rear,ABS)>
+        <!ELEMENT frond (#PCDATA)>
+        <!ELEMENT rear (#PCDATA)>
+        <!ELEMENT ABS (#PCDATA)>
+        <!ATTLIST ABS type (да | не) "да">
+        ]>
+<car_catalog>
+    <car vin="JT2CE82L9F3006626">
+        <make>Тойота</make>
+        <model>Корола</model>
+        <trim>CVT-iS</trim>
+        <year>2020</year>
+        <coupe>Седан</coupe>
+        <color>бял</color>
+        <weight>1300</weight>
+        <tank>50</tank>
+        <drivetrain>
+            <transmission>
+                <transmission_type>предно предаване</transmission_type>
+                <gears>6</gears>
+                <differential>ръчна</differential>
+            </transmission>
+            <engine code="KA24DE">
+                <cylinders>4</cylinders>
+                <engine_type fuel="бензин">i8</engine_type>
+                <size>
+                    <capacity>1800</capacity>
+                    <bore b_unit="мм">54.1</bore>
+                    <stroke>96</stroke>
+                </size>
+                <power unit="кс">125</power>
+            </engine>
+            <brakes>
+                <frond>Дискови вентилирани</frond>
+                <rear>дискови</rear>
+                <ABS type="да"/>
+            </brakes>
+        </drivetrain>
+    </car>
+    <car vin="JT2CS93K9F3006626">
+        <make>Нисан</make>
+        <model>Джук</model>
+        <trim>Текна</trim>
+        <year>2020</year>
+        <coupe>Джип</coupe>
+        <color>червен</color>
+        <weight>1200</weight>
+        <tank>46</tank>
+        <drivetrain>
+            <transmission>
+                <transmission_type>предно предаване</transmission_type>
+                <gears>6</gears>
+                <differential>автоматична</differential>
+            </transmission>
+            <engine code="SD53HG">
+                <cylinders>3</cylinders>
+                <engine_type fuel="бензин">1.0 L 5MT</engine_type>
+                <size>
+                    <capacity>1000</capacity>
+                    <bore b_unit="мм">54.1</bore>
+                    <stroke>96</stroke>
+                </size>
+                <power unit="кс">180</power>
+            </engine>
+            <brakes>
+                <frond>Дискови вентилирани</frond>
+                <rear>дискови</rear>
+                <ABS type="да"/>
+            </brakes>
+        </drivetrain>
+    </car>
+</car_catalog>
